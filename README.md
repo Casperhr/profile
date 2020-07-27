@@ -29,7 +29,10 @@
     status = auto
 ```
 
-bashrc
+### setup bashrc
+`touch .bashrc`
+`sudo vim .bashrc`
+
 ```
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -150,7 +153,10 @@ if ! shopt -oq posix; then
 fi
 ```
 
-bash_profile
+
+### setup bash_profile
+`touch .bash_profile`
+`sudo vim .bashrc`
 ```
 BASH_INTERACTIVE=true
 BASH_LOGIN=false
@@ -226,3 +232,11 @@ else
         export PS1='\[\e[1;32m\]\u \[\e[0m\]@ \[\e[1;33m\]\H \[\e[0m\][ \[\e[1;34m\]\w \[\e[0m\]]$(__git_ps1 " (%s)")\n\[\e[1m\]-> \[\e[0m\]'
 fi
 ```
+
+### Update keyboard repeats
+```bash
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+```
+
+
