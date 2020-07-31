@@ -1,5 +1,7 @@
 ### setup git config
 
+`curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git`
+
 `sudo vim ~/.gitconfig`
 
 ```
@@ -31,9 +33,12 @@
 
 ### setup bashrc
 `touch .bashrc`
+
 `sudo vim .bashrc`
 
 ```
+source ~/.bash_git
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -156,7 +161,9 @@ fi
 
 ### setup bash_profile
 `touch .bash_profile`
+
 `sudo vim .bashrc`
+
 ```
 BASH_INTERACTIVE=true
 BASH_LOGIN=false
