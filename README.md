@@ -191,12 +191,6 @@ then
     . ~/.custom_alias
 fi
 
-# Load special node bash settings
-if [ -f ~/.bash_nodes ];
-then
-        . ~/.bash_nodes
-fi
-
 # Load users own settings
 if [ -f ~/.bash_local ];
 then
@@ -231,13 +225,6 @@ export GIT_PS1_SHOWSTASHSTATE="yes"
 export GIT_PS1_SHOWUNTRACKEDFILES="yes"
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-# Color prompt
-if [[ $EUID == 0 ]] ;
-then
-        export PS1='\[\e[1;31m\]\u \[\e[0m\]@ \[\e[1;33m\]\H \[\e[0m\][ \[\e[1;34m\]\w \[\e[0m\]]$(__git_ps1 " (%s)")\n\[\e[1m\]-> \[\e[0m\]'
-else
-        export PS1='\[\e[1;32m\]\u \[\e[0m\]@ \[\e[1;33m\]\H \[\e[0m\][ \[\e[1;34m\]\w \[\e[0m\]]$(__git_ps1 " (%s)")\n\[\e[1m\]-> \[\e[0m\]'
-fi
 ```
 
 ### Update keyboard repeats
@@ -246,4 +233,8 @@ defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 ```
 
+### Colors terminal
 
+```
+brew install starship
+```
