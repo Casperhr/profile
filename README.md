@@ -160,7 +160,7 @@ fi
 
 
 ### setup bash_profile
-`touch .bash_profile`
+`touch .bashrc`
 
 `sudo vim .bashrc`
 
