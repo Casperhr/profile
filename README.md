@@ -160,9 +160,9 @@ fi
 
 
 ### setup bash_profile
-`touch .bashrc`
+`touch .bash_profile`
 
-`sudo vim .bashrc`
+`sudo vim .bash_profile`
 
 ```
 BASH_INTERACTIVE=true
