@@ -238,3 +238,8 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 ```
 brew install starship
 ```
+
+### Git
+```
+git config --global push.default current
+```
